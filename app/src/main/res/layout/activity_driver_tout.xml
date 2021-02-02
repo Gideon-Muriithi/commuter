@@ -1,0 +1,90 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6576D8">
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Dashboard"
+        android:padding="5dp"
+        android:textColor="#474343"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/relLayout0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="20dp"
+        android:padding="20dp">
+        <!--  This weeks initiatives  -->
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/edit_img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bus_stop"
+                android:contentDescription="@string/todo" />
+
+            <EditText
+                android:id="@+id/bus_stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bus_stop_name"
+                android:padding="15dp"
+                android:autofillHints="@string/bus_stop_name"
+                android:textColor="#474343"
+                android:background="@drawable/custom_btn2"
+                android:inputType="text"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/edit_img"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/edit_img"/>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="150dp">
+
+            <ImageView
+                android:id="@+id/text_img"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/bus_stop"
+                android:contentDescription="@string/todo" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/text_img"
+                android:textColor="#474343"
+                android:text="No bus stop name has been searched yet"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/text_img" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">CommuterApp</string>
+    <string name="app_name_icon">Commuter</string>
+    <string name="Todo">Todo</string>
+    <string name="slogan">#SavingYourTime</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="the_commuter">Welcome commuter! Please note we do not require any person information.
+    Want to save time? Go ahead and let your favorite sacco know you are waiting for them. Select
+    your bus stop location from the dropdown below and we will let the sacco know!</string>
+    <string name="reason">Our reason for existence is to connect the public transport
+    sector with the commuters so as to reduce time wastage especially during rush hours. By
+    acting as an intermediary between the transport sector and the commuters, the platform
+    helps the drivers and touts of the public transport vehicles to locate bus stops that
+    require their urgent attention.</string>
+    <string name="title"><u>Why We Exist</u></string>
+    <string name="location">Enter any optional additional information</string>
+    <string name="spinner_title">Spinner Title</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">forgot password?</string>
+    <string name="resend_verification_email">Resend Verification Email</string>
+    <string name="confirm">confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="email_registration">Registration</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="todo">Todo</string>
+    <string name="logout">logout</string>
+    <string name="account_settings"><u>Account Settings</u></string>
+    <string name="menu_settings">settings</string>
+    <string name="current_password">current password</string>
+    <string name="save">Save</string>
+    <string name="change_password">Change Password</string>
+    <string name="submit">Submit</string>
+    <string name="bus_stop_name">Enter bus stop name</string>
+
+</resources>

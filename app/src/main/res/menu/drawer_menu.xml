@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/driver_tout"
+        android:title="Driver/Tout"
+        android:icon="@drawable/ic_baseline_driver_24"
+        />
+
+    <item android:id="@+id/commuter"
+        android:title="Commuter"
+        android:icon="@drawable/ic_baseline_pessenger_outline_24"
+        />
+
+    <item android:id="@+id/rides"
+        android:title="Rides Conducted On App"
+        android:icon="@drawable/ic_baseline_commute_24"
+        />
+
+    <item android:id="@+id/help"
+        android:title="Help"
+        android:icon="@drawable/ic_baseline_help_24"
+        />
+
+<!--        <item android:id="@+id/login"-->
+<!--            android:title="Help"-->
+<!--            android:icon="@drawable/ic_baseline_help_24"-->
+<!--            />-->
+    </group>
+
+</menu>
