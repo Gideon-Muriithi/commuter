@@ -25,7 +25,7 @@
     <string name="resend_verification_email">Resend Verification Email</string>
     <string name="confirm">confirm</string>
     <string name="cancel">Cancel</string>
-    <string name="email_registration">Registration</string>
+    <string name="email_registration"><u>Registration</u></string>
     <string name="confirm_password">confirm password</string>
     <string name="todo">Todo</string>
     <string name="logout">logout</string>
@@ -36,5 +36,6 @@
     <string name="change_password">Change Password</string>
     <string name="submit">Submit</string>
     <string name="bus_stop_name">Enter bus stop name</string>
+    <string name="dashboard"><u>Dashboard</u></string>
 
 </resources>

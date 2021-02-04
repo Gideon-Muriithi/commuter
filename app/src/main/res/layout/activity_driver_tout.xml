@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6576D8">
+    android:background="#A9A9A9">
 
     <TextView
         android:id="@+id/header"
@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="Dashboard"
+        android:text="@string/dashboard"
         android:padding="5dp"
         android:textColor="#474343"
         android:textSize="25sp" />
@@ -18,9 +18,7 @@
         android:id="@+id/relLayout0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/header"
-        android:layout_marginTop="20dp"
-        android:padding="20dp">
+        android:layout_below="@+id/header">
         <!--  This weeks initiatives  -->
         <RelativeLayout
             android:id="@+id/relLayout1"
@@ -31,7 +29,6 @@
                 android:id="@+id/edit_img"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_centerVertical="true"
                 android:src="@drawable/bus_stop"
                 android:contentDescription="@string/todo" />
 
@@ -42,16 +39,31 @@
                 android:hint="@string/bus_stop_name"
                 android:padding="15dp"
                 android:autofillHints="@string/bus_stop_name"
-                android:textColor="#474343"
+                android:textColor="#fff"
                 android:background="@drawable/custom_btn2"
                 android:inputType="text"
                 android:maxLines="1"
-                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/edit_img"
                 android:textSize="15sp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/edit_img"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edit_img"
+                android:layout_marginLeft="250dp"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_btn2"
+                android:id="@+id/btn_search_stage"
+                android:textColor="@color/linkBlue"
+                android:layout_marginBottom="40dp"
+                android:text="Submit"
+                 />
+
+
 
 
         </RelativeLayout>
@@ -60,12 +72,23 @@
             android:id="@+id/relLayout3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp">
+            android:layout_marginTop="100dp">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/find_stage"
+                android:layout_height="wrap_content"
+                android:textColor="#474343"
+                android:layout_marginTop="105dp"
+                android:text="Find commuter numbers of entered bus stop here:"
+                android:padding="5dp"
+                android:textSize="20sp"
+                />
             <ImageView
                 android:id="@+id/text_img"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
+                android:layout_below="@+id/find_stage"
                 android:layout_centerVertical="true"
                 android:src="@drawable/bus_stop"
                 android:contentDescription="@string/todo" />
@@ -73,14 +96,17 @@
 
             <TextView
                 android:layout_width="wrap_content"
+                android:id="@+id/return_stage"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_toEndOf="@id/text_img"
-                android:textColor="#474343"
+                android:textColor="#fff"
                 android:text="No bus stop name has been searched yet"
                 android:padding="5dp"
-                android:textSize="15sp"
+                android:layout_below="@+id/find_stage"
+                android:textSize="20sp"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/text_img" />
         </RelativeLayout>

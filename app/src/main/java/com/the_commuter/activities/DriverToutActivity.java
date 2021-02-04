@@ -11,23 +11,53 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.androidnetworking.AndroidNetworking;
+import com.androidnetworking.common.Priority;
+import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONArrayRequestListener;
+import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.gson.JsonArray;
 import com.the_commuter.R;
 
-public class DriverToutActivity extends AppCompatActivity {
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+public class DriverToutActivity extends AppCompatActivity implements View.OnClickListener{
     private FirebaseAuth.AuthStateListener mAuthListener;
     private static final String TAG = DriverToutActivity.class.getSimpleName();
+    @BindView(R.id.bus_stop)
+    EditText bus_stopName;
+    @BindView(R.id.btn_search_stage)
+    Button submit_btn;
+    @BindView(R.id.return_stage)
+    TextView setStage;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_tout);
+
+        ButterKnife.bind(this);
+
+        AndroidNetworking.initialize(getApplicationContext());
+        submit_btn.setOnClickListener(this);
+
         setupFirebaseAuth();
 //        getUserDetails();
         setUserDetails();
@@ -159,4 +189,40 @@ public class DriverToutActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onClick(View view) {
+        if (view == submit_btn) {
+            String bus_stop = bus_stopName.getText().toString().trim();
+            if (bus_stop != null) {
+                AndroidNetworking.get("https://event-tracker-system.herokuapp.com/api/get/{bus_stop}/bus_stop")
+                        .addPathParameter("bus_stop", bus_stop)
+                        .setPriority(Priority.LOW)
+                        .build()
+                        .getAsJSONObject(new JSONObjectRequestListener() {
+                            @SuppressLint("SetTextI18n")
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                try {
+                                    int count = response.getInt("count");
+//                                    Toast.makeText(DriverToutActivity.this, String.valueOf(count), Toast.LENGTH_SHORT).show();
+                                    JSONArray jsonArray = response.getJSONArray("results");
+                                    String stage = jsonArray.getJSONObject(0).getString("bus_stop_name");
+
+                                    setStage.setText("Stage name: " + stage + "\n" + "Number of commuters: " + String.valueOf(count));
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                            }
+
+                            @Override
+                            public void onError(ANError anError) {
+
+                            }
+                        });
+            } else {
+                Toast.makeText(this, "Provide a bus stop name", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+    }
 }

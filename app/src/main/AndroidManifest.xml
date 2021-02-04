@@ -26,12 +26,47 @@
         android:roundIcon="@drawable/commuter_bus"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar"
-        tools:replace="android:icon">
-        <activity android:name=".activities.SettingsActivity"></activity>
-        <activity android:name=".activities.RegisterActivity" />
-        <activity android:name=".activities.LoginActivity" />
-        <activity android:name=".activities.DriverToutActivity" android:theme="@style/Theme.Design.Light"/>
-        <activity android:name=".activities.CommuterActivity" />
+        tools:replace="android:icon,android:label">
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:theme="@style/Theme.AppCompat">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.the_commuter.activities.DriverToutActivity" />
+
+        </activity>
+
+        <activity
+            android:name=".activities.RegisterActivity"
+            android:theme="@style/Theme.AppCompat">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.the_commuter.activities.LoginActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/Theme.AppCompat">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.the_commuter.activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.DriverToutActivity"
+            android:theme="@style/Theme.AppCompat">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.the_commuter.activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.CommuterActivity"
+            android:theme="@style/Theme.AppCompat">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.the_commuter.activities.MainActivity" />
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

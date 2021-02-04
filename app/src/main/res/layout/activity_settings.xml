@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@drawable/bg"
+    android:background="#A9A9A9"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -26,8 +26,8 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
                     android:padding="5dp"
+                    android:textColor="#474343"
                     android:text="@string/account_settings"
-                    android:textColor="#fff"
                     android:textSize="25sp" />
 
                 <EditText
@@ -38,6 +38,7 @@
                     android:layout_marginTop="30dp"
                     android:background="@drawable/custom_btn2"
                     android:padding="10dp"
+                    android:textColor="#fff"
                     android:hint="@string/email"
                     android:inputType="textEmailAddress"
                     android:autofillHints="" />
@@ -50,6 +51,7 @@
                     android:layout_marginTop="20dp"
                     android:background="@drawable/custom_btn2"
                     android:padding="10dp"
+                    android:textColor="#fff"
                     android:hint="@string/current_password"
                     android:inputType="textPassword"
                     android:autofillHints="" />
@@ -58,9 +60,10 @@
                     android:id="@+id/btn_save"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/linkBlue"
                     android:layout_below="@+id/input_password"
                     android:layout_marginTop="35dp"
-                    android:textColor="@color/linkBlue"
+                    android:textAllCaps="false"
                     android:background="@drawable/custom_btn2"
                     android:text="@string/save" />
 
@@ -73,8 +76,8 @@
                     android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:padding="5dp"
+                    android:textColor="#474343"
                     android:text="@string/change_password"
-                    android:textColor="@color/linkBlue"
                     android:textSize="16sp" />
             </RelativeLayout>
         </RelativeLayout>

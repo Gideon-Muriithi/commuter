@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#6576D8"
+    android:background="#A9A9A9"
     android:layout_height="match_parent">
 
     <ScrollView
@@ -37,7 +37,7 @@
                     android:layout_marginTop="30dp"
                     android:autofillHints=""
                     android:hint="@string/email"
-                    android:textColor="#474343"
+                    android:textColor="#fff"
                     android:inputType="textEmailAddress" />
 
                 <EditText
@@ -47,7 +47,7 @@
                     android:layout_below="@+id/input_email"
                     android:layout_marginTop="20dp"
                     android:autofillHints=""
-                    android:textColor="#474343"
+                    android:textColor="#fff"
                     android:hint="@string/password"
                     android:inputType="textPassword" />
 
@@ -58,7 +58,7 @@
                     android:layout_below="@+id/input_password"
                     android:layout_marginTop="20dp"
                     android:autofillHints=""
-                    android:textColor="#474343"
+                    android:textColor="#fff"
                     android:hint="@string/confirm_password"
                     android:inputType="textPassword" />
 
@@ -66,8 +66,9 @@
                     android:id="@+id/btn_register"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textAllCaps="false"
                     android:layout_below="@+id/input_confirm_password"
-                    android:textColor="#474343"
+                    android:textColor="@color/linkBlue"
                     android:layout_marginTop="35dp"
                     android:background="@drawable/custom_btn2"
                     android:text="@string/register" />

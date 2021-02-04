@@ -1,17 +1,8 @@
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
-<!--    xmlns:tools="http://schemas.android.com/tools"-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    tools:context=".activities.LoginActivity">-->
-<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6576D8"
+    android:background="#A9A9A9"
     tools:context=".activities.LoginActivity">
 
 
@@ -30,33 +21,32 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:src="@drawable/ic_baseline_directions_bus_24"
+                android:layout_height="180dp"
+                android:src="@drawable/bus2"
                 android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="98dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:padding="20sp"
-                android:text="@string/app_name_icon"
+                android:layout_marginBottom="10dp"
+                android:text="Login"
                 android:textColor="#474343"
-                android:textSize="20sp"
-                android:layout_marginStart="98dp" />
+                android:textSize="30sp" />
 
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:hint="@string/email"
                 android:padding="15dp"
                 android:autofillHints="@string/email"
-                android:textColor="#474343"
+                android:textColor="#fff"
                 android:background="@drawable/custom_btn2"
                 android:inputType="textEmailAddress"
                 android:maxLines="1" />
@@ -69,7 +59,7 @@
                 android:autofillHints="@string/password"
                 android:background="@drawable/custom_btn2"
                 android:hint="@string/password"
-                android:textColor="#474343"
+                android:textColor="#fff"
                 android:padding="15dp"
                 android:imeActionId="@+id/login"
                 android:imeActionLabel="action_sign_in_short"
@@ -87,7 +77,7 @@
                 android:layout_marginTop="30dp"
                 android:text="@string/sign_in"
                 android:textAllCaps="false"
-                android:textColor="#474343"
+                android:textColor="@color/linkBlue"
 
                 android:textStyle="bold" />
 
@@ -104,7 +94,7 @@
                     android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:text="@string/register"
-                    android:textColor="#474343"
+                    android:textColor="@color/linkBlue"
                     android:textSize="16sp" />
 
                 <TextView
@@ -116,7 +106,7 @@
                     android:layout_marginTop="20dp"
                     android:gravity="center"
                     android:text="@string/forgot_password"
-                    android:textColor="#474343"
+                    android:textColor="@color/linkBlue"
                     android:textSize="16sp" />
 
                 <TextView
@@ -127,7 +117,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
                     android:text="@string/resend_verification_email"
-                    android:textColor="#474343"
+                    android:textColor="@color/linkBlue"
                     android:textSize="16sp" />
             </RelativeLayout>
         </LinearLayout>
