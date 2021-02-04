@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,6 +47,9 @@ public class DriverToutActivity extends AppCompatActivity implements View.OnClic
     Button submit_btn;
     @BindView(R.id.return_stage)
     TextView setStage;
+    @BindView(R.id.find_stage)
+    TextView findStage;
+    @BindView(R.id.header) TextView dashboard;
 
 
     @Override
@@ -61,6 +65,11 @@ public class DriverToutActivity extends AppCompatActivity implements View.OnClic
         setupFirebaseAuth();
 //        getUserDetails();
         setUserDetails();
+
+        Typeface ostrich_font = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
+        setStage.setTypeface(ostrich_font);
+        findStage.setTypeface(ostrich_font);
+        dashboard.setTypeface(ostrich_font);
     }
 
     private void setupFirebaseAuth() {

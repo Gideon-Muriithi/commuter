@@ -29,8 +29,9 @@
                 android:gravity="start"
                 android:padding="10dp"
                 android:textColor="#474343"
+                android:lineSpacingExtra="15dp"
                 android:text="@string/the_commuter"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -48,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_btn2"
                 android:padding="10dp"
-                android:textColor="#474343"
+                android:textColor="#121111"
                 android:prompt="@string/spinner_title" />
         </androidx.cardview.widget.CardView>
 
@@ -68,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:textColor="#fff"
+                android:textColor="#121111"
                 android:background="@drawable/custom_btn2"
                 android:hint="@string/location"
                 android:inputType="text"

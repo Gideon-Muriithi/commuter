@@ -2,12 +2,14 @@ package com.the_commuter.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
@@ -34,6 +36,7 @@ public class CommuterActivity extends AppCompatActivity implements AdapterView.O
     String stage;
     @BindView(R.id.btn_submit_stage)
     Button submit_stage;
+    @BindView(R.id.commuter_txt) TextView commuter_txt;
 
     String[] categories = {
             "Ruiru",
@@ -57,6 +60,9 @@ public class CommuterActivity extends AppCompatActivity implements AdapterView.O
 
         submit_stage.setOnClickListener(this);
 
+        Typeface raleway = Typeface.createFromAsset(getAssets(), "fonts/Raleway-Black.ttf");
+        Typeface ostrich_font = Typeface.createFromAsset(getAssets(), "fonts/ostrich-regular.ttf");
+        commuter_txt.setTypeface(ostrich_font);
     }
 
     @Override
